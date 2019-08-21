@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/DartLearn/StateLessWidget.dart';
 import 'package:my_app/DartLearn/flutter_layout_page.dart';
 import 'package:my_app/DartLearn/gesture_page.dart';
+import 'package:my_app/DartLearn/resource_page.dart';
 import 'package:my_app/DartLearn/stateful_group_page.dart';
 
 void main() => runApp(MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         'less': (BuildContext context)=> StatelessGroupPage(),
         'stateful': (BuildContext context)=> StateFullGroupPage(),
         'layout': (BuildContext context) => FlutterLayoutPage(),
-        'gesture': (BuildContext context) =>  GesturePage()
+        'gesture': (BuildContext context) =>  GesturePage(),
+        'resource': (BuildContext context) =>  ResourcePage()
       } ,
     );
   }
@@ -60,6 +62,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
               _item("Stateful", StateFullGroupPage(), 'stateful'),
               _item("Layout", FlutterLayoutPage(), 'layout'),
               _item("Gesture", GesturePage(), 'gesture'),
+              _item("Resource", ResourcePage(), 'resource'),
              ],
             ),
           ),
