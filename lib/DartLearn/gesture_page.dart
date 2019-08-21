@@ -8,7 +8,7 @@ class GesturePage extends StatefulWidget {
 
 class _GesturePageState extends State<GesturePage> {
   String printStr = "";
-  double moveX, moveY = 0;
+  double moveX = 0, moveY = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         'stateful': (BuildContext context)=> StateFullGroupPage(),
         'layout': (BuildContext context) => FlutterLayoutPage(),
         'gesture': (BuildContext context) =>  GesturePage()
-
       } ,
     );
   }
