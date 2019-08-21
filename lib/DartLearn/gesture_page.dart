@@ -80,8 +80,8 @@ class _GesturePageState extends State<GesturePage> {
 
   _doMove(DragUpdateDetails e) {
     setState(() {
-        moveX += e.delta.dx;
         moveY += e.delta.dy;
+        moveX += e.delta.dx;
     }); 
     print(e);
   }
