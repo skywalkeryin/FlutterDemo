@@ -13,18 +13,11 @@ class _GesturePageState extends State<GesturePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Gesture",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Scaffold(
         appBar: AppBar(
             title: Text("Stateful Widget"),
-            leading: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Icon(Icons.arrow_back),
-            )),
+            leading: BackButton(),
+        ),
         body: FractionallySizedBox(
           widthFactor: 1,
           child: Stack(
@@ -60,7 +53,7 @@ class _GesturePageState extends State<GesturePage> {
                     width: 72,
                     decoration: BoxDecoration(
                       color: Colors.amberAccent,
-                      borderRadius: BorderRadius.circular(32)
+                      borderRadius: BorderRadius.circular(36)
                     ),
                   ),
                 ),
