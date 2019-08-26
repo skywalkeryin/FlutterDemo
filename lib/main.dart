@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/DartLearn/LifeCycle.dart';
 import 'package:my_app/DartLearn/StateLessWidget.dart';
 import 'package:my_app/DartLearn/flutter_layout_page.dart';
 import 'package:my_app/DartLearn/gesture_page.dart';
 import 'package:my_app/DartLearn/resource_page.dart';
 import 'package:my_app/DartLearn/stateful_group_page.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -23,16 +26,17 @@ class MyApp extends StatelessWidget {
         'stateful': (BuildContext context)=> StateFullGroupPage(),
         'layout': (BuildContext context) => FlutterLayoutPage(),
         'gesture': (BuildContext context) =>  GesturePage(),
-        'resource': (BuildContext context) =>  ResourcePage()
+        'resource': (BuildContext context) =>  ResourcePage(),
+        'lifeCycle': (BuildContext context) =>  LifeCycle()
       } ,
     );
   }
 }
 
-class RouteNavigator extends StatefulWidget {
+class RouteNavigator extends StatefulWidget  {
   RouteNavigator({Key key, this.title}) : super(key: key);
   final String title;
-
+  
   @override
   _RouteNavigatorState createState() => _RouteNavigatorState();
 }
@@ -64,6 +68,7 @@ class _RouteNavigatorState extends State<RouteNavigator> {
               _item("Layout", FlutterLayoutPage(), 'layout'),
               _item("Gesture", GesturePage(), 'gesture'),
               _item("Resource", ResourcePage(), 'resource'),
+              _item("LifeCycle", LifeCycle(), 'lifeCycle'),
              ],
             ),
           ),

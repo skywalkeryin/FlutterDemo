@@ -6,7 +6,13 @@ class StateFullGroupPage extends StatefulWidget {
   StateFullGroupPageState createState() => StateFullGroupPageState();
 }
 
-class StateFullGroupPageState extends State<StateFullGroupPage> {
+class StateFullGroupPageState extends State<StateFullGroupPage> with WidgetsBindingObserver {
+
+  @override
+  void initState(){
+    super.initState();
+  }
+
   var textStytle = TextStyle(fontSize: 20);
   int _currentIndex = 0;
   @override
